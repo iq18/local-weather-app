@@ -1,6 +1,9 @@
+import { WeatherService } from './weather/weather.service';
+import { CurrentWeatherComponent } from './current-weather/current-weather.component';
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -9,8 +12,9 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent, CurrentWeatherComponent, WeatherService
       ],
+      providers: [WeatherService],
     }).compileComponents();
   }));
 
